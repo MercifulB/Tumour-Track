@@ -1,0 +1,398 @@
+html{
+  scroll-behavior: smooth;;
+}
+/* Set font families */
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background: linear-gradient(200deg, rgba(51,58,75,1) 0%, rgba(50,58,75,1) 61%, rgba(29,34,48,1) 100%);
+  padding: 20px;
+}
+/* Set default font size and color */
+body {
+  font-size: 16px;
+  color: rgb(36,47,62);
+}
+
+/* Set links to use theme color */
+a {
+  color: rgb(44,134,173);
+}
+
+a:hover {
+  color: rgb(76,184,199);
+}
+
+/* Style headings */
+h1{
+  font-family: "Tahoma", "sans serif";
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  font-size: 2px;
+  padding: 0px;
+  margin-bottom: 0px;
+  letter-spacing: .8rem;
+}
+
+h2, h3, h4, h5, h6 {
+  font-family: "Tahoma", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  color: rgb(136, 205, 234);
+}
+
+/* Style paragraphs */
+p {
+  font-family: "Tahoma", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
+  color: white;
+}
+
+/* Set background color and gradient for header */
+header {
+  background: rgb(37,121,143);
+  background: linear-gradient( rgba(202, 207, 208, 0.203), rgba(113, 112, 101, 0));
+  color: white;
+  padding: 20px;
+}
+
+/* Set background color and gradient for hero section */
+.hero {
+  background: rgb(14,64,95);
+  background: linear-gradient(152deg, rgba(52,72,90,1) 0%, rgba(36,48,62,1) 61%, rgba(42,35,50,1) 100%);
+  color: white;
+  padding: 100px 60px;
+  position: relative;
+  overflow: hidden;
+  padding-top: 0px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 10px 20px 0 rgba(0, 0, 0, 0.19);
+  width: 92%;
+  height: 76vh;
+}
+.hero-container {
+  position: relative;
+}
+
+.canvas-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  top: -70%;
+  left: -40%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(250, 126, 240, 0.432) 0%, rgba(255, 255, 255, 0) 30%);
+  z-index: 1;
+  opacity: 0;
+  animation: particles 5s linear infinite;
+}
+
+@keyframes particles {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+}
+
+.hero-content {
+  grid-column: 1 / span 1;
+  
+}
+
+.hero-image {
+  grid-column: 2 / span 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+#brain {
+  max-width: 100%;
+  height: auto;
+}
+
+.hero h1 {
+  margin-bottom: 20px;
+  font-size: 4rem;
+  line-height: 1.1;
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+.hero p {
+  font-size: 1.3rem;
+  line-height: 1.5;
+  margin-bottom: 25px;
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Set background color and gradient for other sections */
+section {
+  background: rgb(173,120,195);
+  background: rgba(36,48,62,1);
+  color: white;
+  padding: 20px 30px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 10px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+section #about {
+  position: relative;
+  z-index: 10;
+}
+
+
+/* Style buttons */
+.btn {
+  background-color: rgb(44,134,173);
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 20px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 10;
+}
+
+.btn:hover {
+  background-color: rgb(6, 54, 109);
+  z-index: 5;
+}
+
+.image-filter {
+  filter: drop-shadow(0px 0px 100px rgba(58, 203, 208, 0.626));
+  position: relative;
+  left: 45%;
+  bottom: 0%;
+  padding-top: 6%;
+  z-index: 3;
+}
+
+blockquote {
+  margin: 0;
+  padding-top: 10%;
+  position: absolute;
+  z-index: 3;
+  text-align: left;
+  grid-column: 2 / span 9;
+  margin-bottom: var(--spacing);  
+}
+
+/*cool fluid box*/
+canvas{
+  position: absolute;
+  background: #cbc8c800;
+  display: flex;
+  flex-wrap: nowrap;
+  /*top: 2vh;  adjust based on screen height */
+  right: 0;
+  bottom: 0;
+  margin: 0px;
+  z-index: 4;
+  /*border: 2px solid white;*/
+  /*width: 95vw;  adjust based on screen width */
+  /*max-width: 1500px;  adjust based on maximum width */
+  /*height: 89vh;  adjust based on screen height */
+  /*max-height: 800px;  adjust based on maximum height */
+  width: 96.5%;
+  height: 90%;
+  left: 0;
+  margin-left: 26px;
+  margin-bottom: 35px;
+  
+}
+/*
+@media only screen and (max-width: 768px) {
+  canvas {
+    top: 3vh;
+    width: 80vw;
+    height: 50vh;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  canvas {
+    top: 0px;
+    width: 70vw;
+    height: 20vh;
+    max-width: 400px;
+    max-height: 200px;
+  }
+}*/
+
+#navbar {
+  overflow: hidden;
+  /*background-color: rgba(46, 218, 224, 0.559);*/
+  padding: 10px -6px; /* Large padding which will shrink on scroll (using JS) */
+  transition: 0.4s; /* Adds a transition effect when the padding is decreased */
+  position: absolute; /* Sticky/fixed navbar */
+  width: 100%;
+  top: 0; /* At the top */
+  left: 0;
+  z-index: 100;
+  border-radius: 5px;
+  backdrop-filter: blur(10px);
+}
+
+/* Style the navbar links */
+#navbar a {
+  font-family: "Tahoma";
+  float: right;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  line-height: 25px;
+  border-radius: 10px;
+  margin-right: 4%;
+}
+
+/* Style the logo */
+#navbar #logo {
+  padding: 5px ;
+  font-size: 30px;
+  font-family: brandon-grotesque, sans-serif;
+  transition: 0.4s;
+  margin: auto;
+  border-radius: 30px;
+  margin-left: 0px;
+  margin-top: 0px;
+  float: left;
+}
+
+#navbar #logo a {
+  color: black;
+  text-decoration: none;
+}
+
+#navbar #logo:hover {
+  /*background-color: rgba(241, 240, 240, 0.792);*/
+  text-decoration: underline;
+}
+
+/* Links on mouse-over */
+#navbar a:not(#navbar #logo):hover {
+  /*background-color: rgba(255, 255, 255, 0.668);*/
+  color: rgba(249, 82, 227, 0.911);
+  transition: 0.2s;
+}
+
+/* Style the active/current link */
+#navbar a.active {
+  background-color: dodgerblue;
+  color: white;
+}
+
+/* Display some links to the right */
+#navbar-right {
+  float: right;
+}
+
+
+/* Add responsiveness - on screens less than 580px wide, display the navbar vertically instead of horizontally */
+@media screen and (max-width: 580px) {
+  
+  /*#navbar {
+    padding: 20px 10px !important;
+     }*/
+  #navbar a {
+    font-size: 1rem;
+  }
+  h1,h2 {
+    font-size: 1rem;
+  }
+
+  #navbar #logo {
+    font-size: 1rem;
+  }
+  /*#navbar-right {
+    float: none;
+  }
+  .toggle {
+    float: none;
+    display: block;
+  }
+  .slider {
+    float: none;
+    display: block;
+    }*/
+}
+
+/*Part*/
+
+#particles-js {
+  position: relative;
+  width: 1300px;
+  height: 300px;
+  background-color: #b61924;
+  background-image: url("");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+/*Blob Pic*/
+
+.blob {
+  width: 400px;
+  height: 400px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 42% 56% 72% 28% / 42% 42% 56% 48%;
+  background: url('doc.png');
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 0 15px rgba(0, 0, 0, .2);
+  animation: blob 3.7s linear infinite;
+  margin-left: 25%;
+}
+
+@keyframes blob {
+  0%, 100% {
+      border-radius:
+          42% 56% 72% 28% / 42% 42% 56% 48%;
+  }
+
+  33% {
+      border-radius:
+          42% 28% 48% 48% / 28% 28% 72% 72%;
+  }
+
+  66% {
+      border-radius:
+          100% 56% 56% 100% / 100% 100% 56% 56%;
+  }
+}
+
+.by-mercy {
+  position: relative;
+  bottom: 10px;
+  left: 0px;
+  font-size: 20px;
+  color: #dddbd8;
+  font-family:'Courier New', monospace;
+}
+.cursor {
+  animation: blink 1s linear infinite;
+}
+@keyframes blink {
+  0% {opacity: 1;}
+  50% {opacity: 0;}
+  100% {opacity: 1;}
+}
